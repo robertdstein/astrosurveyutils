@@ -159,5 +159,14 @@ for mapname in maplist:
                                    wfau_dbname=survey_database_names[survey_string]
                                    ))
 
+extra = {
+    'survey_name': 'UKIRT-uhs-K',
+    'coverage_file': datadir / 'uhs-J-DR2_annotated.fits',
+    'filter_name': 'K',
+    'lim_mag': 20.51,
+    'wfau_dbname': 'UHSDR2'
+}
+known_surveys.append(MOCSurvey(**extra))
+
 known_ukirt_surveys = [x for x in known_surveys if 'UKIRT' in x.survey_name]
 known_vista_surveys = [x for x in known_surveys if 'VISTA' in x.survey_name]
